@@ -6,7 +6,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <p style="text-align:right">
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value == 'night')
+    {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+    }
+    else
+    {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+    }
+    ">
+    <label for="language">Language:</label>
+    <select id="language" name="language">
+      <option value="kor">한국어</option>
+      <option value="eng">English</option>
+      <option value="jap">日本語</option>
+    </select>　
+  </p>
   <h1><a href="index.html">JIHWAN OH</a></h1>
+
   <div id=grid>
     <ol>
       <li><a href="reflection_refraction.html">Reflection and Refraction</a></li>
