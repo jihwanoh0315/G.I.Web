@@ -6,6 +6,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <p style="text-align:right">
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value == 'night')
+    {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+
+      var aList = document.querySelectorAll('a');
+      var aLen = aList.length;
+      for(let i = 0; i < aLen; i++)
+      {
+        aList[i].style.color = 'powderblue';
+      }
+      document.getElementById('active').style.color = 'lightpink';
+    }
+    else
+    {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+
+      var aList = document.querySelectorAll('a');
+      var aLen = aList.length;
+      for(let i = 0; i < aLen; i++)
+      {
+        aList[i].style.color = 'black';
+      }
+      document.getElementById('active').style.color = 'red';
+    }
+    ">
+    <label for="language">Language:</label>
+    <select id="language" name="language" onchange="location = this.value;">
+      <option value="index_kr.html">한국어</option>
+      <option value="3.html" selected>English</option>
+      <option value="index_ja.html">日本語</option>
+    </select>　
+  </p>
+
   <h1><a href="index.html">JIHWAN OH</a></h1>
   <div id=grid>
     <ol>
