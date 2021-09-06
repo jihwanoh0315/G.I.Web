@@ -4,39 +4,12 @@
   <title>WEB1 - CSS</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script src="colors.js"></script>
 </head>
 <body>
   <p style="text-align:right">
     <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value == 'night')
-    {
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = 'day';
-
-      var aList = document.querySelectorAll('a');
-      var aLen = aList.length;
-      for(let i = 0; i < aLen; i++)
-      {
-        aList[i].style.color = 'powderblue';
-      }
-      document.getElementById('active').style.color = 'lightpink';
-    }
-    else
-    {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value = 'night';
-
-      var aList = document.querySelectorAll('a');
-      var aLen = aList.length;
-      for(let i = 0; i < aLen; i++)
-      {
-        aList[i].style.color = 'black';
-      }
-      document.getElementById('active').style.color = 'red';
-    }
+      nightDayhandler(this);
     ">
     <label for="language">Language:</label>
     <select id="language" name="language" onchange="location = this.value;">

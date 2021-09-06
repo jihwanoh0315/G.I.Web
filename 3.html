@@ -4,40 +4,7 @@
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript">
-  function nightDayhandler(thisButton)
-  {
-    var target = document.querySelector('body');
-    if(thisButton.value == 'night')
-    {
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      thisButton.value = 'day';
-
-      var aList = document.querySelectorAll('a');
-      var aLen = aList.length;
-      for(let i = 0; i < aLen; i++)
-      {
-        aList[i].style.color = 'powderblue';
-      }
-      document.getElementById('active').style.color = 'lightpink';
-    }
-    else
-    {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      thisButton.value = 'night';
-
-      var aList = document.querySelectorAll('a');
-      var aLen = aList.length;
-      for(let i = 0; i < aLen; i++)
-      {
-        aList[i].style.color = 'black';
-      }
-      document.getElementById('active').style.color = 'red';
-    }
-  }
-  </script>
+  <script src="colors.js"></script>
 </head>
 <body>
   <p style="text-align:right">
